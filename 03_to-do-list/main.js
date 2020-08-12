@@ -13,11 +13,23 @@ document.addEventListener('DOMContentLoaded', function () {
     liAdd.addEventListener('click', function () {
       liAdd.classList.toggle("checked");
     });
+    spanAdd.addEventListener('click', function () {
+      spanAdd.parentElement.remove();
+    });
+
+
   })
   let liColor = document.querySelectorAll('li');
   liColor.forEach((li) => {
     li.addEventListener('click', function () {
       li.classList.toggle("checked");
+    });
+  });
+
+  let liRemove = document.querySelectorAll('.close');
+  liRemove.forEach((span) => {
+    span.addEventListener('click', function () {
+      span.parentElement.remove();
     });
   });
 
